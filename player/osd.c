@@ -289,7 +289,9 @@ static void term_osd_print_status_lazy(struct MPContext *mpctx)
     }
 
     // end
-    term_osd_set_status_lazy(mpctx, line);
+    //term_osd_set_status_lazy(mpctx, line);
+    static int framenum = 0; //.TSTS
+    if ((framenum++ % 5) == 0) fprintf(stderr, "%s\n", line); //.TSTS
     talloc_free(line);
 }
 
