@@ -1003,7 +1003,8 @@ static void play_current_file(struct MPContext *mpctx)
 
     handle_force_window(mpctx, false);
 
-    MP_INFO(mpctx, "Playing: %s\n", mpctx->filename);
+    //MP_INFO(mpctx, "Playing: %s\n", mpctx->filename);
+    fprintf(stderr, "Playing: %s\n", mpctx->filename); //.TSTS
 
 reopen_file:
 
