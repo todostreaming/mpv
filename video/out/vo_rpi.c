@@ -818,6 +818,7 @@ static int recreate_dispmanx(struct vo *vo)
     p->update = vc_dispmanx_update_start(0);
     if (!p->display || !p->update) {
         MP_FATAL(vo, "Could not get DISPMANX objects.\n");
+        fprintf(stderr, "Could not get DISPMANX objects.\n"); //.TSTS
         if (p->display)
             vc_dispmanx_display_close(p->display);
         p->display = 0;

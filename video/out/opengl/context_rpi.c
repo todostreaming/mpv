@@ -106,6 +106,7 @@ static int recreate_dispmanx(struct MPGLContext *ctx)
     p->update = vc_dispmanx_update_start(0);
     if (!p->display || !p->update) {
         MP_FATAL(ctx->vo, "Could not get DISPMANX objects.\n");
+        fprintf(stderr, "Could not get DISPMANX objects.\n"); //.TSTS
         goto fail;
     }
 
